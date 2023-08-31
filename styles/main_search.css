@@ -1,0 +1,44 @@
+.main_container{
+  display:flex;
+  height: auto;
+  min-height: 87.5vh;
+  position: relative;
+  padding: 1%;
+  flex-direction: column;
+}
+
+.seacrh_area{
+  display: flex;
+  border: solid;
+  border-width: 0.5px;
+  border-color: var(--border-color);
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 20%;
+  padding: 2%;
+  padding-top: 1%;
+  align-content: space-between;
+  border-radius: 5px;
+}
+
+.search_area_name{
+  font-size: 50px;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.search_area_guide{
+  font-size: 30px;
+  margin: 1% 0;
+  color: var(--text-color-gray);
+}
+
+#seacrh_area_bar{
+  font-size: 23px;
+  height: 10%;
+  padding: 0.7%;
+  border: solid;
+  border-radius: 5px;
+  border-width: 0.5px;
+  border-color: var(--border-color);
+}

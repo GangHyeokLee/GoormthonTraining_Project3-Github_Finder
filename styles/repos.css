@@ -1,0 +1,40 @@
+.repositorys{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border: none;
+  border-radius: 5px;
+  border-width: 0.5px;
+  height: 100%;
+  /* margin-bottom: 30%; */
+}
+
+.repo_list{
+  display: flex;
+  flex-direction: row;
+  border: solid var(--border-color);
+  border-radius: 5px;
+  border-width: 0.5px;
+  padding: 2%;
+  margin-top: 1%;
+  justify-content: start;
+  align-items: center;
+}
+
+.repo_details{
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+.prob{
+  padding: 1% 5%;
+  margin-right: 3%;
+}
+
+.repo_link{
+  width: 60%;
+  color: var(--button-color-1);
+  text-decoration: none;
+  font-size: 125%;
+}

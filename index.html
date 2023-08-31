@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Finder</title>
   <link rel="stylesheet" href="styles/general.css">
   <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main_search.css">
+  <link rel="stylesheet" href="styles/profile.css">
+  <link rel="stylesheet" href="styles/repos.css">
+  <link rel="stylesheet" href="styles/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap"
     rel="stylesheet">
   <script defer src="script.js"></script>
 </head>
+
 <body>
   <header class="header">
     <div class="Logo">
@@ -20,18 +25,74 @@
   </header>
   <main class="main_container">
     <div class="seacrh_area">
-      <div class="search_area_name">
+      <h1 class="search_area_name">
         Seach GitHub Users
-      </div>
+      </h1>
       <div class="search_area_guide">
         Enter a user name to fetch a user profile and repos
       </div>
       <input type="text" id="seacrh_area_bar">
     </div>
-    <div class="profile"></div>
-    <div class="repositorys"></div>
+    <div class="profile">
+      <div class="profile_img">
+        <div class="avatar">
+          이미지
+        </div>
+        <button class="view_profile" value="view_profile">View Profile</button>
+      </div>
+      <div class="profile_details">
+        <div class="profile_counts">
+          <div class="counts bc1" id="pbRepos">Public repos</div>
+          <div class="counts bc2" id="pbGists">public gists</div>
+          <div class="counts bc3" id="follwers">followers</div>
+          <div class="counts bc4" id="following">following</div>
+        </div>
+        <table>
+          <tr><td class="profile_personal" id="company">company: null</td></tr>
+          <tr><td class="profile_personal" id="website">website:</td></tr>
+          <tr><td class="profile_personal" id="location">location:</td></tr>
+          <tr><td class="profile_personal" id="member_since">member_snce</td></tr>
+        </table>
+      </div>
+    </div>
+    <h1>Latest Repos</h1>
+    <div class="repositorys">
+  
+      <div class="repo_list" id="1repo_list">
+        <a href="#" class="repo_link" id="1repo_link">주소주소주소</a>
+        <div class="repo_details" id="1repo_details">
+          <div class="counts bc1 prob" id="1stars">
+            stars1
+          </div>
+          <div class="counts bc2 prob" id="1watchers">
+            Watchers
+          </div>
+          <div class="counts bc3 prob" id="1forks">
+            Forks
+          </div>
+        </div>
+      </div>
+
+      <div class="repo_list" id="2repo_list">
+        <a href="#" class="repo_link" id="2repo_link">주소주소주소</a>
+        <div class="repo_details" id="2repo_details">
+          <div class="counts bc1 prob" id="2stars">
+            stars1
+          </div>
+          <div class="counts bc2 prob" id="2watchers">
+            Watchers
+          </div>
+          <div class="counts bc3 prob" id="2forks">
+            Forks
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
-  
+  <footer>
+    <div class="foot">GitHub Finder ©</div>
+  </footer>
 </body>
+
 </html>
