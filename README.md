@@ -13,5 +13,5 @@ https://lh4.googleusercontent.com/0ssibwlS0PUq_PLuxVrNIWWWALeAVmxcMwBi_oJOS5QAxp
 - 비동기 통신을 이용하기.(완료)
 - 그 외 기능 만들어보기
 ================================================
-1. 아무것도 입력안하면 undefined 뜨는거 해결필요
-2. 이미지 없을 때 다른 이미지로 대체할 수 있게하기
+1. 아무것도 입력안하면 undefined 뜨는거 해결필요(완료)
+2. 이미지 없을 때 다른 이미지로 대체할 수 있게하기(완료)
