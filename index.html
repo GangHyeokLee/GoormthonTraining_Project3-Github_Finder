@@ -35,23 +35,21 @@
     </div>
     <div class="profile">
       <div class="profile_img">
-        <div class="avatar">
-          이미지
-        </div>
-        <button class="view_profile" value="view_profile">View Profile</button>
+        <img id="avatar_url" alt="이미지" displa>
+        <button class="view_profile bc1" id="view_profile">View Profile</button>
       </div>
       <div class="profile_details">
         <div class="profile_counts">
-          <div class="counts bc1" id="pbRepos">Public repos</div>
-          <div class="counts bc2" id="pbGists">public gists</div>
-          <div class="counts bc3" id="follwers">followers</div>
-          <div class="counts bc4" id="following">following</div>
+          <div class="counts bc1" id="public_repos">Public Repos: <span style="color:transparent">00</span></div>
+          <div class="counts bc2" id="public_gists">Public Gists: <span style="color:transparent">00</span></div>
+          <div class="counts bc3" id="followers">Followers: <span style="color:transparent">00</span></div>
+          <div class="counts bc4" id="following">Following: <span style="color:transparent">00</span></div>
         </div>
         <table>
-          <tr><td class="profile_personal" id="company">company: null</td></tr>
-          <tr><td class="profile_personal" id="website">website:</td></tr>
-          <tr><td class="profile_personal" id="location">location:</td></tr>
-          <tr><td class="profile_personal" id="member_since">member_snce</td></tr>
+          <tr><td class="profile_personal" id="company">Company: </td></tr>
+          <tr><td class="profile_personal" id="blog">Website/Blog: </td></tr>
+          <tr><td class="profile_personal" id="location">Location: </td></tr>
+          <tr><td class="profile_personal" id="created_at">Member Since: </td></tr>
         </table>
       </div>
     </div>
