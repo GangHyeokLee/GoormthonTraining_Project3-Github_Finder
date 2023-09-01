@@ -34,19 +34,19 @@ class Repositoy{
     const stars = document.createElement('div');
     stars.setAttribute('class', 'counts bc1 prob');
     stars.setAttribute('id', this.id+'_stars');
-    stars.innerHTML='Stars: ' + (parseInt(this.stars/10==0)?'<span style="color:transparent">0</span>'+this.stars:this.stars);
+    stars.innerHTML='Stars: ' + (parseInt(this.stars/10)==0?'<span style="color:transparent">0</span>'+this.stars:this.stars);
     repo_details.appendChild(stars);
 
     const watchers = document.createElement('div');
     watchers.setAttribute('class', 'counts bc2 prob');
     watchers.setAttribute('id', this.id+'_watchers');
-    watchers.innerHTML='Watchers: ' + (parseInt(this.watchers/10==0)?'<span style="color:transparent">0</span>'+this.watchers:this.watchers);
+    watchers.innerHTML='Watchers: ' + (parseInt(this.watchers/10)==0?'<span style="color:transparent">0</span>'+this.watchers:this.watchers);
     repo_details.appendChild(watchers);
 
     const forks = document.createElement('div');
     forks.setAttribute('class', 'counts bc3 prob');
     forks.setAttribute('id', this.id+'_forks');
-    forks.innerHTML='Forks: ' + (parseInt(this.forks/10==0)?'<span style="color:transparent">0</span>'+this.forks:this.forks);
+    forks.innerHTML='Forks: ' + (parseInt(this.forks/10)==0?'<span style="color:transparent">0</span>'+this.forks:this.forks);
     repo_details.appendChild(forks);
 
     repo_list.appendChild(repo_details);
@@ -88,18 +88,18 @@ function setProfileInfos(profile){
 
   //레포, 기스트, 팔로워, 팔로잉 설정
   const public_repos = document.getElementById('public_repos');
-  public_repos.innerHTML = 'Public Repos: '+ (parseInt(profile.public_repos/10==0)?'<span style="color:transparent">0</span>'+profile.public_repos:profile.public_repos);
+  public_repos.innerHTML = 'Public Repos: '+ (profile.public_repos?(parseInt(profile.public_repos/10)==0?('<span style="color:transparent">0</span>'+profile.public_repos):profile.public_repos):'<span style="color:transparent">0</span>0');
 
   //한자리 수면 앞에 투명 0넣어서 모양 맞추기
   const public_gists = document.getElementById('public_gists');
-  public_gists.innerHTML = 'Public Gists: '+ (parseInt(profile.public_gists/10==0)?'<span style="color:transparent">0</span>'+profile.public_gists:profile.public_gists);
+  public_gists.innerHTML = 'Public Gists: '+ (profile.public_gists?(parseInt(profile.public_gists/10)==0?'<span style="color:transparent">0</span>'+profile.public_gists:profile.public_gists):'<span style="color:transparent">0</span>0');
 
   const followers = document.getElementById('followers');
-  followers.innerHTML = 'Followers: '+ (parseInt(profile.followers/10==0)?'<span style="color:transparent">0</span>'+profile.followers:profile.followers);
+  followers.innerHTML = 'Followers: '+ (profile.followers?(parseInt(profile.followers/10)==0?'<span style="color:transparent">0</span>'+profile.followers:profile.followers):'<span style="color:transparent">0</span>0');
   // console.log(profile.followers/10)
 
   const following = document.getElementById('following');
-  following.innerHTML = 'Following: ' + (parseInt(profile.following/10==0)?'<span style="color:transparent">0</span>'+profile.following:profile.following);
+  following.innerHTML = 'Following: ' + (profile.following?(parseInt(profile.following/10)==0?'<span style="color:transparent">0</span>'+profile.following:profile.following):'<span style="color:transparent">0</span>0');
 
 
   //company, website, location, member_since 넣기

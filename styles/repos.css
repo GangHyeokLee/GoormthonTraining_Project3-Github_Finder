@@ -24,7 +24,7 @@
 .repo_details{
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 50%;
 }
 
 .prob{
@@ -33,7 +33,7 @@
 }
 
 .repo_link{
-  width: 60%;
+  width: 50%;
   color: var(--button-color-1);
   text-decoration: none;
   font-size: 125%;
