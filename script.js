@@ -81,9 +81,22 @@ search.addEventListener("keyup", async (keyCode) => {
 function setProfileInfos(profile){
   // console.log(profile);
 
-  //프로필 사진
+  //프로필 사진, 검색결과 있으면 이미지 보여주고 없으면 검색결과 없음 보이기
   const avatar_url = document.getElementById('avatar_url');
-  avatar_url.setAttribute('src', profile.avatar_url);
+  const avatar_fake = document.getElementById('avatar_fake');
+  if(profile.url){
+    
+    avatar_url.setAttribute('src', profile.avatar_url);
+    avatar_url.setAttribute('style', 'display:block');
+    
+    avatar_fake.setAttribute('style', 'display:none');
+  }
+  else{
+    avatar_fake.setAttribute('style', 'display:flex');
+    avatar_url.setAttribute('style', 'display:none');
+  }
+
+  
 
 
   //레포, 기스트, 팔로워, 팔로잉 설정
