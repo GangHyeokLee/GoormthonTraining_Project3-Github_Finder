@@ -86,7 +86,6 @@ function setProfileInfos(profile){
   avatar_url.setAttribute('src', profile.avatar_url);
 
 
-
   //레포, 기스트, 팔로워, 팔로잉 설정
   const public_repos = document.getElementById('public_repos');
   public_repos.innerHTML = 'Public Repos: '+ (parseInt(profile.public_repos/10==0)?'<span style="color:transparent">0</span>'+profile.public_repos:profile.public_repos);
@@ -121,12 +120,31 @@ function setProfileInfos(profile){
   view_profile.addEventListener('click', () =>{window.open(profile.html_url);});
 };
 
+
+//레포지토리 만들기
 function setRepositories(repos){
-  const repositories = document.getElementsByClassName('repositories')[0];
-  for(let i of repos){
-    const tmp = new Repositoy(i.id, i.name, i.stargazers_count, i.watchers, i.forks, i.clone_url);
-  repositories.appendChild(tmp.makeList());
+  const main_cont = document.getElementsByClassName('main_container')[0];
+
+  let repositories = document.getElementsByClassName('repositories')[0];
+
+  if(repositories)
+  {
+    main_cont.removeChild(repositories);
   }
+
+  repositories = document.createElement('div');
+  repositories.setAttribute('class', 'repositories');
+  main_cont.appendChild(repositories);
+
+  // console.log(repos);
+
+  if(repos.message!='Not Found'){
+    for(let i of repos){
+      const tmp = new Repositoy(i.id, i.name, i.stargazers_count, i.watchers, i.forks, i.clone_url);
+    repositories.appendChild(tmp.makeList());
+    }
+  }
+  
   
 
 }
