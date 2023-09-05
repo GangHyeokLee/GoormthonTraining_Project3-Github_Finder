@@ -75,6 +75,23 @@ search.addEventListener("keyup", async (keyCode) => {
     .catch( msg=>{
       console.error('레포 안불러와짐 ㅠ'+msg);
     });
+
+    let jandibat = document.getElementById('jandibat');
+    let jandidasin = document.getElementsByClassName('jandi_dasin')[0];
+
+    if(user_name){
+    
+    jandibat.setAttribute('src', 'https://ghchart.rshah.org/'+user_name);
+    jandibat.setAttribute('style','display: block');
+
+    jandidasin.setAttribute('style', 'display: none');
+
+    }else{
+    jandibat.setAttribute('style','display: none');
+
+    jandidasin.setAttribute('style', 'display: flex');
+    }
+    
   }
 });
 
